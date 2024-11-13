@@ -1,8 +1,6 @@
-module github.com/isAlbertYu/ninjabot
+module github.com/rodrigo-brito/ninjabot
 
 go 1.18
-
-replace github.com/rodrigo-brito/ninjabot => github.com/isAlbertYu/ninjabot v0.0.0
 
 require (
 	github.com/StudioSol/set v1.0.0

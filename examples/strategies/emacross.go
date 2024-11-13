@@ -11,7 +11,7 @@ import (
 type CrossEMA struct{}
 
 func (e CrossEMA) Timeframe() string {
-	return "4h"
+	return "1m"
 }
 
 func (e CrossEMA) WarmupPeriod() int {
