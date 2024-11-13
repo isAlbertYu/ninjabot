@@ -12,11 +12,11 @@ type CrossEMA struct {
 	timeframe string
 }
 
-func (e CrossEMA) SetTimeframe(timeframe string) {
+func (e *CrossEMA) SetTimeframe(timeframe string) {
 	e.timeframe = timeframe
 }
 
-func (e CrossEMA) Timeframe() string {
+func (e *CrossEMA) Timeframe() string {
 	// return "1m"
 	return e.timeframe
 }
@@ -25,7 +25,7 @@ func (e CrossEMA) WarmupPeriod() int {
 	return 22
 }
 
-func (e CrossEMA) Indicators(df *ninjabot.Dataframe) []strategy.ChartIndicator {
+func (e *CrossEMA) Indicators(df *ninjabot.Dataframe) []strategy.ChartIndicator {
 	df.Metadata["ema8"] = indicator.EMA(df.Close, 8)
 	df.Metadata["sma21"] = indicator.SMA(df.Close, 21)
 
