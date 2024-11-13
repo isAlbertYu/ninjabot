@@ -12,7 +12,7 @@ type CrossEMA struct {
 	timeframe string
 }
 
-func (e CrossEMA) SetTimeframe(timeframe string) string {
+func (e CrossEMA) SetTimeframe(timeframe string) {
 	e.timeframe = timeframe
 }
 
