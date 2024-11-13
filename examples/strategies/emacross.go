@@ -8,10 +8,17 @@ import (
 	"github.com/rodrigo-brito/ninjabot/tools/log"
 )
 
-type CrossEMA struct{}
+type CrossEMA struct {
+	timeframe string
+}
+
+func (e CrossEMA) SetTimeframe(timeframe string) string {
+	e.timeframe = timeframe
+}
 
 func (e CrossEMA) Timeframe() string {
-	return "1m"
+	// return "1m"
+	return e.timeframe
 }
 
 func (e CrossEMA) WarmupPeriod() int {
